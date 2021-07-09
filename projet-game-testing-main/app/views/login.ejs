@@ -1,0 +1,35 @@
+<%- include('partials/header')%>
+    <main id="main__loginPage">
+    <h1>LOGIN</h1>
+    <% if(locals.error) { %>
+        <article class="message is-danger">
+            <div class="message-header">
+              <p>Errors</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+                <%= error %>
+            </div>
+          </article>
+    <% } %>
+    <form action="" method="POST" id="login__form" class="column is-half">
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input class="input" name="email" id="email" type="email" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" name="password" id="password" type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fa fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <button class="button is-primary">Submit</button>
+    </form>
+</main>
+<%- include('partials/footer')%>

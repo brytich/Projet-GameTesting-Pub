@@ -1,0 +1,28 @@
+<%- include('partials/header')%>
+<a href="/logout"><i class="fas fa-door-open"> LogOut</i></a>
+    <h1 class="mainTitle">Home</h1>
+    <div class="cards__container">
+        <a href="/admin/reports">
+        <div class="card">
+            <div class="card-image">
+                <i class="cardIcon fa fa-exclamation-circle fa-7x"></i>
+            </div>
+            <div class="card-content">
+                <p class="title is-4 is-center">Reports</p>
+                <p class="subtitle is-6 is-center">Show all reports</p>
+            </div>
+        </div>
+        </a>
+        <a href="/admin/messages">
+        <div class="card">
+            <div class="card-image">
+                <i class="cardIcon fa fa-mail-bulk fa-7x"></i>
+            </div>
+            <div class="card-content">
+                <p class="title is-4 is-center">Messages</p>
+                <p class="subtitle is-6 is-center">Show all messages</p>
+            </div>
+        </div>
+        </a>
+    </div>
+<%- include('partials/footer')%>

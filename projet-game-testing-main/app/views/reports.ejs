@@ -1,0 +1,35 @@
+<%- include('partials/header')%>
+  <section class="section">
+    <div class="container is-half
+    is-offset-one-quarter">
+      <a href="/admin/home"><i class="fas fa-arrow-left"></i></a>
+      
+        <h1 class="mainTitle">All reports</h1>
+
+        <table class="table"> 
+            <thead>
+                <tr>
+                    <th>Content</th>
+                    <th>Date</th>
+                    <th>Nb of reports</th>
+                    <th>Nb of bad votes</th>
+                    <th>Clean report</th>
+                    <th>Delete report</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for ( const report of reports) { %>
+                <tr>
+                    <td><%= report.content %> </td>
+                    <td><%= report.create_date %></td>
+                    <td><%= report.report %></td>
+                    <td><%= report.down_vote %></td>
+                    <td><a href="/admin/reports/<%=report.id%>/clean"><button class="button is-primary">Clean report</button></a></td>
+                    <td><a href="/admin/reports/<%=report.id%>/delete"><button class="button is-danger">Delete report</button></a></td>
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>      
+    </div>
+  </section>
+  <%- include('partials/footer')%>

@@ -1,0 +1,28 @@
+<%- include('partials/header')%>
+  <section class="section">
+    <a href="/admin/home"><i class="fas fa-arrow-left"></i></a>
+    <div class="container is-half
+    is-offset-one-quarter">
+        <h1 class="mainTitle">All messages</h1>
+
+        <table class="table"> 
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for ( const message of  messages) { %>
+                <tr>
+                    <td><%= message.email %> </td>
+                    <td><%= message.content %></td>
+                    <td><%= message.create_date %></td>
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>    
+    </div>
+  </section>
+  <%- include('partials/footer')%>
